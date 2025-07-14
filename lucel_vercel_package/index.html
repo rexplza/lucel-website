@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucel Hero Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body, html {
+        height: 100%;
+        font-family: 'Segoe UI', sans-serif;
+        color: #fff;
+      }
+      .hero {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('background.png') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffe600;
+        margin-bottom: 10px;
+      }
+      .logo span {
+        color: white;
+      }
+      .tagline {
+        font-size: 1rem;
+        font-style: italic;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeIn 2s forwards 1s;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffe600;
+        line-height: 1.4;
+        margin-bottom: 40px;
+        opacity: 0;
+        animation: fadeIn 2s forwards 2s;
+      }
+      .description {
+        max-width: 600px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #e0e0e0;
+        margin-bottom: 30px;
+        opacity: 0;
+        animation: fadeIn 2s forwards 3s;
+      }
+      .buttons a {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 24px;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .btn-yellow { background: #ffcc00; color: #000; }
+      .btn-yellow:hover { background: #e6b800; }
+      .btn-pink { background: #ff5aa2; color: #fff; }
+      .btn-pink:hover { background: #e04a91; }
+      .btn-blue { background: #3b82f6; color: #fff; }
+      .btn-blue:hover { background: #2563eb; }
+
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        .description {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="logo">Atelier <span>Lucel.</span></div>
+      <div class="tagline">“We don’t follow hype-driven roadmaps. We follow music and meaning.”</div>
+      <h1>Lucel is where music, memes,<br />and creativity come alive - in Web3</h1>
+      <div class="description">
+        LCL MemeCoin (LCL-GT) serves as the primary governance mechanism within the Lucel ecosystem. <br />
+        Lucel (LCL-UT) enables real-world usage across Lucel Cafés, NFT events, and microtransactions.
+      </div>
+      <div class="buttons">
+        <a class="btn-yellow" href="LCL_Whitepaper_v1.0.pdf" target="_blank">Whitepaper 보기</a>
+        <a class="btn-pink" href="https://t.me/LCLMemeCoin" target="_blank">커뮤니티 참여하기</a>
+        <a class="btn-blue" href="https://x.com/AtelierLucel" target="_blank">Meme Contest 보기</a>
+      </div>
+    </div>
+  </body>
+</html>
+
