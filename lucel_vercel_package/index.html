@@ -4,27 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucel Hero Page</title>
-
-    <!-- Baloo 2 font for logo only -->
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet" />
-
     <style>
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-
-      body,
-      html {
+      body, html {
         height: 100%;
         font-family: 'Segoe UI', sans-serif;
         color: #fff;
+        background-color: #000;
       }
-
       .hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-          url('background.png') no-repeat center center/cover;
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('background.png') no-repeat center center/cover;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -33,20 +26,15 @@
         text-align: center;
         padding: 0 20px;
       }
-
       .logo {
-        font-size: 2.8rem;
-        font-weight: 700;
-        font-family: 'Baloo 2', cursive;
+        font-size: 2rem;
+        font-weight: bold;
         color: #ffe600;
         margin-bottom: 10px;
-        margin-top: -30px; /* move upward */
       }
-
       .logo span {
         color: white;
       }
-
       .tagline {
         font-size: 1rem;
         font-style: italic;
@@ -54,7 +42,6 @@
         opacity: 0;
         animation: fadeIn 2s forwards 1s;
       }
-
       h1 {
         font-size: 2.5rem;
         font-weight: 700;
@@ -64,7 +51,6 @@
         opacity: 0;
         animation: fadeIn 2s forwards 2s;
       }
-
       .description {
         max-width: 600px;
         font-size: 0.9rem;
@@ -74,7 +60,6 @@
         opacity: 0;
         animation: fadeIn 2s forwards 3s;
       }
-
       .buttons a {
         display: inline-block;
         margin: 10px;
@@ -85,49 +70,53 @@
         font-weight: bold;
         transition: 0.3s;
       }
+      .btn-yellow { background: #ffcc00; color: #000; }
+      .btn-yellow:hover { background: #e6b800; }
+      .btn-pink { background: #ff5aa2; color: #fff; }
+      .btn-pink:hover { background: #e04a91; }
+      .btn-blue { background: #3b82f6; color: #fff; }
+      .btn-blue:hover { background: #2563eb; }
+      .btn-purple { background: #a855f7; color: #fff; }
+      .btn-purple:hover { background: #9333ea; }
 
-      .btn-yellow {
-        background: #ffcc00;
-        color: #000;
-      }
-
-      .btn-yellow:hover {
-        background: #e6b800;
-      }
-
-      .btn-pink {
-        background: #ff5aa2;
+      .lucel-shop-section {
+        background: url('lucel_shop_background.png') no-repeat center center/cover;
+        position: relative;
+        padding: 100px 30px;
         color: #fff;
       }
 
-      .btn-pink:hover {
-        background: #e04a91;
+      .lucel-shop-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px;
+        border-radius: 20px;
+        font-family: 'Segoe UI', sans-serif;
       }
 
-      .btn-blue {
-        background: #3b82f6;
-        color: #fff;
+      .lucel-shop-overlay h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ffe600;
       }
 
-      .btn-blue:hover {
-        background: #2563eb;
+      .lucel-shop-overlay h3 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: #ffcc00;
       }
 
-      .btn-purple {
-        background: #a855f7;
-        color: #fff;
-      }
-
-      .btn-purple:hover {
-        background: #9333ea;
+      .lucel-shop-overlay p, .lucel-shop-overlay li {
+        line-height: 1.6;
+        font-size: 1rem;
+        margin-bottom: 15px;
       }
 
       @keyframes fadeIn {
-        to {
-          opacity: 1;
-        }
+        to { opacity: 1; }
       }
-
       @media (max-width: 768px) {
         h1 {
           font-size: 1.8rem;
@@ -141,41 +130,40 @@
   <body>
     <div class="hero">
       <div class="logo">Atelier <span>Lucel.</span></div>
-      <div class="tagline">
-        “We don’t follow hype-driven roadmaps. We follow music and meaning.”
-      </div>
-      <h1>
-        Lucel is where music, memes,<br />
-        and creativity come alive - in Web3
-      </h1>
+      <div class="tagline">“We don’t follow hype-driven roadmaps. We follow music and meaning.”</div>
+      <h1>Lucel is where music, memes,<br />and creativity come alive - in Web3</h1>
       <div class="description">
-        LCL MemeCoin (LCL-GT) serves as the primary governance mechanism within
-        the Lucel ecosystem. <br />
-        Lucel (LCL-UT) enables real-world usage across Lucel Cafés, NFT events,
-        and microtransactions.
+        LCL MemeCoin (LCL-GT) serves as the primary governance mechanism within the Lucel ecosystem. <br />
+        Lucel (LCL-UT) enables real-world usage across Lucel Cafés, NFT events, and microtransactions.
       </div>
       <div class="buttons">
-        <a class="btn-yellow" href="LCL_Whitepaper_v1.0.pdf" target="_blank"
-          >View Whitepaper</a
-        >
-        <a
-          class="btn-pink"
-          href="https://t.me/LCLMemeCoin"
-          target="_blank"
-          >Join Community</a
-        >
-        <a
-          class="btn-blue"
-          href="https://x.com/AtelierLucel"
-          target="_blank"
-          >View Meme Contest</a
-        >
-        <a
-          class="btn-purple"
-          href="https://suno.com/@atelierlucel"
-          target="_blank"
-          >Explore Suno AI</a
-        >
+        <a class="btn-yellow" href="#whitepaper">View Whitepaper</a>
+        <a class="btn-pink" href="https://t.me/LCLMemeCoin" target="_blank">Join Community</a>
+        <a class="btn-blue" href="https://x.com/AtelierLucel" target="_blank">View Meme Contest</a>
+        <a class="btn-purple" href="https://suno.com/@atelierlucel" target="_blank">Explore Suno AI</a>
+      </div>
+    </div>
+
+    <div class="lucel-shop-section">
+      <div class="lucel-shop-overlay">
+        <h2>What is Lucel?</h2>
+        <p>
+          Derived from “Luc-” meaning light, and “-el” signifying a being or angel,<br />
+          Lucel embodies the essence of a luminous presence — a beacon of inspiration and creative spirit.
+        </p>
+        <p>
+          More than just a name, Lucel is a philosophy:<br />
+          a symbol of emotion, artistry, and the decentralized future of expression.<br />
+          It represents a cultural renaissance where music, memes, and Web3 converge<br />
+          to illuminate human creativity in its most authentic form.
+        </p>
+        <p><strong>Core Themes:</strong> Music · Memes · NFTs · Web3 · Community · Emotion · Shared Café · Style</p>
+        <h3>Lucel in the Ecosystem</h3>
+        <ul>
+          <li><strong>Atelier Lucel</strong><br />A sanctuary for creative exploration — where music, memes, and digital art are crafted with emotional resonance and artistic depth.</li>
+          <li><strong>Lucel Café</strong><br />A real-world extension of the Lucel ethos. A warm, communal space where people connect, converse, and create — inspired by the soul of art and decentralization.</li>
+          <li><strong>Lucel Shop</strong><br />The official store of the Lucel universe. A curated lifestyle boutique offering apparel, accessories, and goods that embody Lucel’s artistic identity.</li>
+        </ul>
       </div>
     </div>
   </body>
